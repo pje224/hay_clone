@@ -22,5 +22,6 @@ a {
 .container {
   position: relative;
   margin: auto;
-  width: 1250px;
+  width: 100%;
+  max-width: 1250px;
 }

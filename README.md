@@ -10,7 +10,7 @@ font-weight: 400;
 font-style: normal;
 }
 
-<!-- monteserrat - 상품명 -->
+<!-- monteserrat - 카테고리 -->
 
 .montserrat-<uniquifier> {
 font-family: "Montserrat", sans-serif;
