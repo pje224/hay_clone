@@ -36,3 +36,13 @@ body {
   width: 100%;
   max-width: 1250px;
 }
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  position: absolute;
+  top: -60px !important;
+  text-align: center;
+  color: #eee;
+  font-size: 1.5rem !important;
+
+}
