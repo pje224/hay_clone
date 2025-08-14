@@ -44,5 +44,23 @@ body {
   text-align: center;
   color: #eee;
   font-size: 1.5rem !important;
-
+}
+/* 반응형 */
+@media all and (max-width: 1200px) {
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    display: none;
+  }
+}
+@media all and (max-width: 768px) {
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    display: none;
+  }
+}
+@media all and (max-width: 390px) {
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    display: block;
+  }
 }
