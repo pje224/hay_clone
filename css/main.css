@@ -19,6 +19,9 @@ a {
   text-decoration: none;
   text-transform: uppercase;
 }
+body {
+  background-color: #f2f2f2;
+}
 .container {
   position: relative;
   margin: auto;
