@@ -1,8 +1,8 @@
 window.addEventListener("load", function () {
   const swiper = new Swiper(".product-imgs", {
-    // slidesPerView: 3.3,
+    slidesPerView: 3.3,
     spaceBetween: 30,
-    cssMode: true,
+
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -21,9 +21,9 @@ window.addEventListener("load", function () {
     },
   });
   const swiper2 = new Swiper(".outdoor-imgs", {
-    // slidesPerView: 2.3,
+    slidesPerView: 2.3,
     spaceBetween: 30,
-    cssMode: true,
+
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",

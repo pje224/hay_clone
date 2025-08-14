@@ -34,7 +34,7 @@ body {
   position: relative;
   margin: auto;
   width: 100%;
-  max-width: 1250px;
+  max-width: 1200px;
 }
 
 .swiper-button-next:after,
@@ -46,7 +46,7 @@ body {
   font-size: 1.5rem !important;
 }
 /* 반응형 */
-@media all and (max-width: 1200px) {
+@media all and (max-width: 1920px) {
   .swiper-button-next:after,
   .swiper-button-prev:after {
     display: none;
