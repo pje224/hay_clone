@@ -48,7 +48,7 @@ window.addEventListener("load", function () {
       delay: 2500,
       disableOnInteraction: false,
     },
-        // 처음으로 자연스럽게 넘어가기
+    // 처음으로 자연스럽게 넘어가기
     loop: true,
   });
   const swiper4 = new Swiper(".mo-banner", {
@@ -58,7 +58,34 @@ window.addEventListener("load", function () {
       delay: 2500,
       disableOnInteraction: false,
     },
-        // 처음으로 자연스럽게 넘어가기
+    // 처음으로 자연스럽게 넘어가기
     loop: true,
+  });
+  // 햄버거 메뉴 기능
+  const hamburger = this.document.querySelector("#hamburger");
+  const mobileMenu = this.document.querySelector("#mobileMenu");
+  const product = this.document.querySelector(".product");
+  const subMenu = this.document.querySelector(".sub-menu");
+  // 햄버거바 클릭시
+  hamburger.addEventListener("click", function () {
+    if (hamburger.classList.contains("active")) {
+      mobileMenu.classList.remove("active");
+      hamburger.classList.remove("active");
+      document.body.style.overflow = "";
+    } else {
+      mobileMenu.classList.add("active");
+      hamburger.classList.add("active");
+      document.body.style.overflow = mobileMenu.classList.contains("active")
+        ? "hidden"
+        : "";
+    }
+  });
+
+  product.addEventListener("click", function () {
+    if (subMenu.classList.contains("open")) {
+      subMenu.classList.remove("open");
+    } else {
+      subMenu.classList.add("open");
+    }
   });
 });

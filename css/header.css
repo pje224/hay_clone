@@ -2,15 +2,12 @@
 .header {
   position: fixed;
   width: 100%;
-  /* height: 209px; */
+  height: 135px;
   padding: 50px 0;
   background-color: #f2f2f2;
   z-index: 9999;
 }
-.header-menu {
-  width: 80%;
-  margin: auto;
-}
+
 .header-menu ul {
   display: flex;
   /* justify-content: space-between; */
@@ -18,7 +15,6 @@
   justify-content: center;
   gap: 5%;
   margin: auto;
-  width: 80%;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: clamp(12px, 3vw, 16px);
@@ -30,6 +26,80 @@
   min-width: 135px;
   white-space: nowrap;
 }
+/* 햄버거 메뉴 */
+.hamburger {
+  /* display: flex; */
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  border: 0;
+  background: none;
+}
+/* 햄버거 메뉴 */
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border: 2px;
+  /* margin: 3px 0; */
+}
+/* 검색 아이콘 */
+.fa-solid {
+  position: absolute;
+  top: 45%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: block;
+  font-size: 22px;
+  color: #333;
+}
+/* 모바일일때 사이드 메뉴 */
+.mobile-menu {
+  position: fixed;
+  top: 165px;
+  left: 0px;
+  width: 100vw;
+  /* height: 100vh; */
+  height: 0;
+  /* padding: 30px; */
+  /* padding-top: 30px; */
+  background-color: #f2f2f2;
+  z-index: 999;
+  transition: all 0.3s;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+}
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+  height: 100vh;
+}
+.mobile-menu li a {
+  display: block;
+  padding: 1rem 0;
+  font-weight: 600;
+  font-family: "Pretendard Regular";
+}
+
+/* 서브메뉴 */
+.sub-menu {
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.sub-menu.open {
+  height: 205px;
+  opacity: 1;
+  visibility: visible;
+}
+/* 로고 */
 .header-logo {
   width: 100px;
   margin: auto;
@@ -40,4 +110,59 @@
 }
 .header-logo img {
   width: 100%;
+}
+/* 반응형 */
+
+@media screen and (max-width: 1920px) {
+  .header-menu {
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+  }
+}
+@media screen and (max-width: 2306px) {
+  .header-inner > i {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 768px) {
+  .fa-solid {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 390px) {
+  .header {
+    padding-top: 25px !important;
+  }
+  .header-logo {
+    width: 60px;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .header-menu {
+    display: none;
+    visibility: hidden;
+  }
+  .hamburger {
+    display: flex;
+  }
+  /* 햄버거 메뉴 애니메이션 */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-6px, -7px);
+  }
+  .header-container {
+    width: 90%;
+  }
+  .fa-solid {
+    display: block;
+    visibility: visible;
+  }
 }

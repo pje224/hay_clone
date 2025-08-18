@@ -27,7 +27,7 @@
 }
 @media screen and (max-width: 390px) {
   .visual {
-    padding-top: 256px !important ;
+    padding-top: 165px !important ;
   }
   .web-banner {
     display: none;
