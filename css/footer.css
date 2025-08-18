@@ -35,21 +35,24 @@
   margin: 30px 0 50px;
 }
 .footer-menu ul {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 32px; */
+  width: 100%;
 }
 .footer-menu ul li {
+  display: inline-block;
   position: relative;
+  padding: 0 1%;
 }
 .footer-menu ul li::after {
   content: "";
   position: absolute;
-  top: 6px;
-  right: -17px;
+  top: 8px;
+  right: -2px;
   width: 1px;
-  height: 15px;
+  height: 13px;
   background-color: #757575;
 }
 .footer-menu ul li:last-child::after {
@@ -62,15 +65,29 @@
   letter-spacing: 2px;
 }
 /* 주소 */
-.address {
+
+/* .address,
+.address1,
+.address2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 3%;
   font-size: clamp(12px, 3vw, 16px);
   font-family: "Pretendard-Regular";
+  white-space: nowrap;
+} */
+.address {
+  width: 100%;
+  max-width: 600px;
+  /* gap: 5%; */
+  /* background-color: aquamarine; */
+  margin: auto;
 }
-.address p:nth-child(3) {
+.address span {
+  padding: 0 1%;
+}
+.address span:nth-of-type(3) {
   text-decoration: underline;
 }
 /* 붙임말 */
@@ -78,4 +95,23 @@
   margin: 30px 0 50px;
   font-size: 1rem;
   font-family: "Pretendard-Regular";
+}
+.address-mobile {
+  display: none;
+}
+/* 반응형 */
+@media screen and (max-width: 768px) {
+  .address span {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 390px) {
+  /* .address {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+  } */
+  .address-mobile {
+    display: block;
+  }
 }

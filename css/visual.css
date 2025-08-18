@@ -1,11 +1,38 @@
 @charset "utf-8";
 .visual {
   width: 100%;
-  padding-top: 215px !important;
+  padding-top: 235px !important;
 }
 .visual img {
   display: block;
   width: 100%;
-  margin-bottom: 7px;
-  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+  /* margin-bottom: 7px; */
+  /* box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1); */
+}
+@media screen and (max-width: 1920px) {
+  .web-banner {
+    display: block;
+  }
+  .mo-banner {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .web-banner {
+    display: block;
+  }
+  .mo-banner {
+    display: none;
+  }
+}
+@media screen and (max-width: 390px) {
+  .visual {
+    padding-top: 256px !important ;
+  }
+  .web-banner {
+    display: none;
+  }
+  .mo-banner {
+    display: block;
+  }
 }

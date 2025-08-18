@@ -41,14 +41,24 @@ window.addEventListener("load", function () {
       },
     },
   });
-  const swiper3 = new Swiper(".visual", {
+  const swiper3 = new Swiper(".web-banner", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
     },
-    // 처음으로 자연스럽게 넘어가기
+        // 처음으로 자연스럽게 넘어가기
+    loop: true,
+  });
+  const swiper4 = new Swiper(".mo-banner", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+        // 처음으로 자연스럽게 넘어가기
     loop: true,
   });
 });
