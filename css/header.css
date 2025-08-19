@@ -137,6 +137,7 @@
   .header {
     padding: 30px 0;
   }
+
   .fa-solid {
     display: none;
     visibility: hidden;
@@ -144,12 +145,13 @@
 }
 @media screen and (max-width: 390px) {
   .header {
-    padding-top: 25px !important;
+    padding-top: 30px !important;
   }
+
   .header-logo {
     width: 60px;
     margin: auto;
-    margin-top: 50px;
+    /* margin-top: 30px; */
   }
   .header-menu {
     display: none;
