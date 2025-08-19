@@ -58,6 +58,12 @@ body {
     display: none;
   }
 }
+@media screen and (max-width: 767px){
+    .swiper-button-next:after,
+  .swiper-button-prev:after {
+    display: block;
+  }
+}
 @media all and (max-width: 390px) {
   .swiper-button-next:after,
   .swiper-button-prev:after {
