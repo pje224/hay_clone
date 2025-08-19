@@ -2,7 +2,7 @@
 .header {
   position: fixed;
   width: 100%;
-  height: 135px;
+  /* height: 135px; */
   padding: 50px 0;
   background-color: #f2f2f2;
   z-index: 9999;
@@ -20,6 +20,9 @@
   font-size: clamp(12px, 3vw, 16px);
   text-align: center;
   letter-spacing: 2px;
+}
+.header-menu ul li {
+  padding: 3px 0;
 }
 .header-menu ul a {
   width: calc(100% / 6);
@@ -84,7 +87,7 @@
   display: block;
   padding: 1rem 0;
   font-weight: 600;
-  font-family: "Pretendard Regular";
+  font-family: "Pretendard";
 }
 
 /* 서브메뉴 */
@@ -93,6 +96,10 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+}
+.sub-menu li a {
+  font-weight: 600;
+  font-family: "Baskervville";
 }
 .sub-menu.open {
   height: 205px;
@@ -127,6 +134,9 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .header {
+    padding: 30px 0;
+  }
   .fa-solid {
     display: none;
     visibility: hidden;
@@ -148,6 +158,9 @@
   .hamburger {
     display: flex;
   }
+  .hamburger span {
+    transition: transform 0.3s ease;
+  }
   /* 햄버거 메뉴 애니메이션 */
   .hamburger.active span:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 6px);
@@ -161,8 +174,8 @@
   .header-container {
     width: 90%;
   }
-  .fa-solid {
-    display: block;
+  .header-inner > i {
+    display: block !important;
     visibility: visible;
   }
 }

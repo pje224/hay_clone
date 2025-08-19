@@ -83,6 +83,7 @@
   /* gap: 5%; */
   /* background-color: aquamarine; */
   margin: auto;
+  color: #333;
 }
 .address span {
   padding: 0 1%;
@@ -93,8 +94,10 @@
 /* 붙임말 */
 .footer-ps {
   margin: 30px 0 50px;
-  font-size: 1rem;
-  font-family: "Pretendard-Regular";
+  font-size: clamp(12px, 3vw, 16px);
+  font-weight: 300;
+  font-family: "Pretendard";
+  color: #333;
 }
 .address-mobile {
   display: none;
@@ -103,6 +106,9 @@
 @media screen and (max-width: 768px) {
   .address span {
     font-size: 12px;
+  }
+  .footer-ps {
+    margin: 30px 0 30px;
   }
 }
 @media screen and (max-width: 390px) {
@@ -113,5 +119,8 @@
   } */
   .address-mobile {
     display: block;
+  }
+  .footer-ps {
+    margin: 30px 0 30px;
   }
 }
