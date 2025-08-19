@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
   const swiper = new Swiper(".product-imgs", {
-    slidesPerView: 3.3,
+    slidesPerView: 1,
     spaceBetween: 30,
 
     navigation: {
@@ -10,18 +10,18 @@ window.addEventListener("load", function () {
     breakpoints: {
       // 1200일때 slidesPerView5개반개 보이겠다
       390: {
-        slidesPerView: 1,
-      },
-      768: {
         slidesPerView: 3.3,
-      },
-      1200: {
-        slidesPerView: 3.3,
+        // },
+        // 768: {
+        //   slidesPerView: 3.3,
+        // },
+        // 1200: {
+        //   slidesPerView: 3.3,
       },
     },
   });
   const swiper2 = new Swiper(".outdoor-imgs", {
-    slidesPerView: 2.3,
+    slidesPerView: 1,
     spaceBetween: 30,
 
     navigation: {
@@ -31,14 +31,14 @@ window.addEventListener("load", function () {
     breakpoints: {
       // 1200일때 slidesPerView5개반개 보이겠다
       390: {
-        slidesPerView: 1,
-      },
-      768: {
         slidesPerView: 2.3,
       },
-      1200: {
-        slidesPerView: 2.3,
-      },
+      // 768: {
+      //   slidesPerView: 2.3,
+      // },
+      // 1200: {
+      //   slidesPerView: 2.3,
+      // },
     },
   });
   const swiper3 = new Swiper(".web-banner", {
