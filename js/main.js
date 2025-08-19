@@ -51,7 +51,17 @@ window.addEventListener("load", function () {
     // 처음으로 자연스럽게 넘어가기
     loop: true,
   });
-  const swiper4 = new Swiper(".mo-banner", {
+  const swiper4 = new Swiper(".tab-banner", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    // 처음으로 자연스럽게 넘어가기
+    loop: true,
+  });
+  const swiper5 = new Swiper(".mo-banner", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
