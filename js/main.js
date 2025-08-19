@@ -79,7 +79,7 @@ window.addEventListener("load", function () {
   // 햄버거바 클릭시
   hamburger.addEventListener("click", function () {
     if (hamburger.classList.contains("active")) {
-      mobileMenu.classList.remove("active");
+      mobileMenu.classList.remove("active")''
       hamburger.classList.remove("active");
       document.body.style.overflow = "";
     } else {
