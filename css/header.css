@@ -52,16 +52,6 @@
   border-radius: 3px;
   /* margin: 3px 0; */
 }
-/* 검색 아이콘 */
-.fa-solid {
-  position: absolute;
-  top: 45%;
-  right: 20px;
-  transform: translateY(-50%);
-  display: block;
-  font-size: 22px;
-  color: #333;
-}
 /* 모바일일때 사이드 메뉴 */
 .mobile-menu {
   position: fixed;
@@ -109,7 +99,17 @@
   visibility: visible;
 }
 
-/* 서치 페이지 */
+/* 검색 아이콘 */
+.fa-solid {
+  position: absolute;
+  top: 45%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: block;
+  font-size: 22px;
+  color: #333;
+}
+/* 검색 페이지 */
 .search-page {
   position: fixed;
   top: 90px;
