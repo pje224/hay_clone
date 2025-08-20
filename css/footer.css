@@ -49,10 +49,10 @@
 .footer-menu ul li::after {
   content: "";
   position: absolute;
-  top: 8px;
+  top: 9px;
   right: -2px;
   width: 1px;
-  height: 13px;
+  height: 12px;
   background-color: #757575;
 }
 .footer-menu ul li:last-child::after {
