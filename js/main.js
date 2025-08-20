@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
     },
     breakpoints: {
       // 1200일때 slidesPerView5개반개 보이겠다
-      390: {
+      391: {
         slidesPerView: 3.3,
         // },
         // 768: {
@@ -30,7 +30,7 @@ window.addEventListener("load", function () {
     },
     breakpoints: {
       // 1200일때 slidesPerView5개반개 보이겠다
-      390: {
+      391: {
         slidesPerView: 2.3,
       },
       // 768: {

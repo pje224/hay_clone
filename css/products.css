@@ -15,7 +15,7 @@
 .product-desc h2::after {
   content: "";
   position: absolute;
-  top: 52px;
+  top: 48px;
   left: 50%;
   transform: translateX(-50%);
   width: 32px;
@@ -47,4 +47,19 @@
 }
 .outdoor-imgs ul li {
   width: calc(100% / 2);
+}
+@media screen and (max-width: 1920px) {
+  .product-desc h2::after {
+    top: 52px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .product-desc h2::after {
+    top: 50px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .product-desc h2::after {
+    top: 48px;
+  }
 }

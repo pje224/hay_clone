@@ -108,6 +108,39 @@
   opacity: 1;
   visibility: visible;
 }
+
+/* 서치 페이지 */
+.search-page {
+  position: fixed;
+  top: 90px;
+  left: 0px;
+  width: 100vw;
+  /* height: 0; */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 20px;
+  background-color: #f2f2f2;
+  z-index: 999;
+  transition: all 0.3s;
+  text-align: center;
+  /* opacity: 0; */
+  /* visibility: hidden; */
+}
+.search-page input {
+  width: 55%;
+  border: none;
+  border-bottom: 1px solid #333;
+  background-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+.search-page input:focus::placeholder {
+  opacity: 0;
+}
+
 /* 로고 */
 .header-logo {
   width: 100px;
