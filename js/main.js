@@ -115,6 +115,7 @@ window.addEventListener("load", function () {
         : "";
     }
   });
+  // 검색페이지 창닫기
   searchClose.addEventListener("click", () => {
     if (searchClose.classList.contains("active")) {
       searchPage.classList.remove("active");
