@@ -28,6 +28,7 @@ a {
   text-transform: uppercase;
 }
 body {
+  /* position: relative; */
   background-color: #f2f2f2;
 }
 .container {
@@ -35,6 +36,20 @@ body {
   margin: auto;
   width: 100%;
   max-width: 1200px;
+}
+
+.goTop-btn {
+  /* display: none; */
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  width: 40px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.goTop-btn img {
+  width: 100%;
 }
 
 .swiper-button-next:after,

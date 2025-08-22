@@ -98,4 +98,13 @@ window.addEventListener("load", function () {
       subMenu.classList.add("open");
     }
   });
+
+  //   위로가기 버튼
+  const goTopBtn = this.document.querySelector(".goTop-btn");
+  goTopBtn.addEventListener("click", () => {
+    this.window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 });
