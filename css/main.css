@@ -92,6 +92,8 @@ body {
     display: block;
   }
   .goTop-btn {
-    width: 25px;
+    width: 30px;
+    bottom: 15px;
+    right: 20px;
   }
 }
