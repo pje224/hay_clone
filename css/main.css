@@ -47,7 +47,7 @@ body {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  z-index: 999999;
+  z-index: 99;
 }
 .goTop-btn img {
   width: 100%;

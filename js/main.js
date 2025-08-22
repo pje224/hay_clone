@@ -85,7 +85,27 @@ window.addEventListener("load", function () {
     } else {
       mobileMenu.classList.add("active");
       hamburger.classList.add("active");
+      searchPage.classList.remove("active");
       document.body.style.overflow = mobileMenu.classList.contains("active")
+        ? "hidden"
+        : "";
+    }
+  });
+  // 검색 페이지
+  const searchIcon = this.document.querySelector(".search-icon");
+  const searchPage = this.document.querySelector(".search");
+  // 돋보기 클릭시
+  searchIcon.addEventListener("click", () => {
+    if (searchIcon.classList.contains("active")) {
+      searchPage.classList.remove("active");
+      searchIcon.classList.remove("active");
+      document.body.style.overflow = "";
+    } else {
+      searchPage.classList.add("active");
+      searchIcon.classList.add("active");
+      hamburger.classList.remove("active");
+      mobileMenu.classList.remove("active");
+      document.body.style.overflow = searchPage.classList.contains("active")
         ? "hidden"
         : "";
     }

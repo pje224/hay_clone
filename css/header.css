@@ -46,10 +46,10 @@
 /* 햄버거 메뉴 */
 .hamburger span {
   width: 25px;
-  height: 3px;
-  background-color: #333;
+  height: 1px;
+  background-color: #000;
   /* border: 2px; */
-  border-radius: 3px;
+  /* border-radius: 3px; */
   /* margin: 3px 0; */
 }
 /* 모바일일때 사이드 메뉴 */
@@ -77,7 +77,7 @@
 .mobile-menu li a {
   display: block;
   padding: 1rem 0;
-  font-weight: 600;
+  font-weight: 700;
   font-family: "Pretendard";
 }
 
@@ -100,22 +100,30 @@
 }
 
 /* 검색 아이콘 */
-.fa-solid {
+.search-icon {
   position: absolute;
-  top: 45%;
+  top: 0;
   right: 20px;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
+  width: 22px;
   display: block;
   font-size: 22px;
   color: #333;
+  cursor: pointer;
+}
+.search-icon img {
+  width: 100%;
+}
+.search-icon.active {
+  display: none;
 }
 /* 검색 페이지 */
-.search-page {
+.search {
   position: fixed;
   top: 90px;
   left: 0px;
   width: 100vw;
-  /* height: 0; */
+  height: 0;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -124,13 +132,25 @@
   z-index: 999;
   transition: all 0.3s;
   text-align: center;
-  /* opacity: 0; */
-  /* visibility: hidden; */
+  opacity: 0;
+  visibility: hidden;
+}
+.search.active {
+  height: 100vh;
+  opacity: 1;
+  visibility: visible;
+}
+.search-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  width: 50%;
+  height: 30px;
+  border-bottom: 1px solid #000;
 }
 .search-page input {
-  width: 55%;
   border: none;
-  border-bottom: 1px solid #333;
   background-color: transparent;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -139,6 +159,9 @@
 }
 .search-page input:focus::placeholder {
   opacity: 0;
+}
+.search-page img {
+  width: 20px;
 }
 
 /* 로고 */
@@ -162,7 +185,7 @@
   }
 } */
 @media screen and (max-width: 2306px) {
-  .header-inner > i {
+  .search-icon {
     display: none;
     visibility: hidden;
   }
@@ -174,7 +197,7 @@
   .header-menu ul {
     font-size: 14px;
   }
-  .fa-solid {
+  .search-icon {
     display: none;
     visibility: hidden;
   }
@@ -183,7 +206,6 @@
   .header {
     padding-top: px !important;
   }
-
   .header-logo {
     width: 60px;
     margin: auto;
@@ -201,18 +223,18 @@
   }
   /* 햄버거 메뉴 애니메이션 */
   .hamburger.active span:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-3px, 6px);
   }
   .hamburger.active span:nth-child(2) {
     opacity: 0;
   }
   .hamburger.active span:nth-child(3) {
-    transform: rotate(45deg) translate(-6px, -7px);
+    transform: rotate(45deg) translate(-2px, -6px);
   }
   .header-container {
     width: 90%;
   }
-  .header-inner > i {
+  .search-icon {
     display: block !important;
     visibility: visible;
   }
