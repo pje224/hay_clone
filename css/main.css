@@ -47,6 +47,7 @@ body {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  z-index: 999999;
 }
 .goTop-btn img {
   width: 100%;
@@ -89,5 +90,8 @@ body {
   .swiper-button-next:after,
   .swiper-button-prev:after {
     display: block;
+  }
+  .goTop-btn {
+    width: 25px;
   }
 }
