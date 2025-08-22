@@ -81,28 +81,50 @@ window.addEventListener("load", function () {
     if (hamburger.classList.contains("active")) {
       mobileMenu.classList.remove("active");
       hamburger.classList.remove("active");
+      searchOpen.classList.remove("active");
       document.body.style.overflow = "";
     } else {
       mobileMenu.classList.add("active");
       hamburger.classList.add("active");
       searchPage.classList.remove("active");
+      searchClose.classList.remove("active");
       document.body.style.overflow = mobileMenu.classList.contains("active")
         ? "hidden"
         : "";
     }
   });
   // 검색 페이지
-  const searchIcon = this.document.querySelector(".search-icon");
+  const searchOpen = this.document.querySelector(".search-open");
+  const searchClose = this.document.querySelector(".search-close");
   const searchPage = this.document.querySelector(".search");
   // 돋보기 클릭시
-  searchIcon.addEventListener("click", () => {
-    if (searchIcon.classList.contains("active")) {
+  searchOpen.addEventListener("click", () => {
+    if (searchOpen.classList.contains("active")) {
       searchPage.classList.remove("active");
-      searchIcon.classList.remove("active");
+      searchOpen.classList.remove("active");
+      searchClose.classList.remove("active");
       document.body.style.overflow = "";
     } else {
       searchPage.classList.add("active");
-      searchIcon.classList.add("active");
+      searchOpen.classList.add("active");
+      searchClose.classList.add("active");
+      hamburger.classList.remove("active");
+      mobileMenu.classList.remove("active");
+      document.body.style.overflow = searchPage.classList.contains("active")
+        ? "hidden"
+        : "";
+    }
+  });
+  searchClose.addEventListener("click", () => {
+    if (searchClose.classList.contains("active")) {
+      searchPage.classList.remove("active");
+      searchOpen.classList.remove("active");
+      searchClose.classList.remove("active");
+      document.body.style.overflow = "";
+    } else {
+      searchPage.classList.add("active");
+      searchOpen.classList.add("active");
+      searchClose.classList.add("active");
       hamburger.classList.remove("active");
       mobileMenu.classList.remove("active");
       document.body.style.overflow = searchPage.classList.contains("active")
