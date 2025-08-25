@@ -144,6 +144,13 @@ window.addEventListener("load", function () {
 
   //   위로가기 버튼
   const goTopBtn = this.document.querySelector(".goTop-btn");
+  this.window.addEventListener("scroll", () => {
+    if (this.document.documentElement.scrollTop > 200) {
+      goTopBtn.classList.add("active");
+    } else {
+      goTopBtn.classList.remove("active");
+    }
+  });
   goTopBtn.addEventListener("click", () => {
     this.window.scrollTo({
       top: 0,
