@@ -52,6 +52,27 @@
   /* border-radius: 3px; */
   /* margin: 3px 0; */
 }
+/* 메뉴 페이지 창닫기 */
+.menu-close {
+  position: absolute;
+  top: 5px;
+  left: 25px;
+  /* display: none; */
+  width: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.menu-close > img {
+  width: 100%;
+}
+.menu-close.active {
+  /* display: block; */
+  opacity: 1;
+  visibility: visible;
+  transform: rotate(-90deg);
+}
 /* 모바일일때 사이드 메뉴 */
 .mobile-menu {
   position: fixed;
@@ -246,10 +267,14 @@
     display: flex;
   }
   .hamburger span {
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
   }
   /* 햄버거 메뉴 애니메이션 */
-  .hamburger.active span:nth-child(1) {
+  .hamburger.active {
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* .hamburger.active span:nth-child(1) {
     transform: rotate(-45deg) translate(-3px, 6px);
   }
   .hamburger.active span:nth-child(2) {
@@ -257,7 +282,8 @@
   }
   .hamburger.active span:nth-child(3) {
     transform: rotate(45deg) translate(-2px, -6px);
-  }
+  } */
+
   .header-container {
     width: 90%;
   }

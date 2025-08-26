@@ -73,6 +73,7 @@ window.addEventListener("load", function () {
   });
   // 햄버거 메뉴 기능
   const hamburger = this.document.querySelector("#hamburger");
+  const menuClose = this.document.querySelector(".menu-close");
   const mobileMenu = this.document.querySelector("#mobileMenu");
   const product = this.document.querySelector(".product");
   const subMenu = this.document.querySelector(".sub-menu");
@@ -81,11 +82,33 @@ window.addEventListener("load", function () {
     if (hamburger.classList.contains("active")) {
       mobileMenu.classList.remove("active");
       hamburger.classList.remove("active");
+      menuClose.classList.remove("active");
       searchOpen.classList.remove("active");
       document.body.style.overflow = "";
     } else {
       mobileMenu.classList.add("active");
       hamburger.classList.add("active");
+      menuClose.classList.add("active");
+      searchOpen.classList.remove("active");
+      searchPage.classList.remove("active");
+      searchClose.classList.remove("active");
+      document.body.style.overflow = mobileMenu.classList.contains("active")
+        ? "hidden"
+        : "";
+    }
+  });
+  // 메뉴 페이지 창닫기
+  menuClose.addEventListener("click", () => {
+    if (menuClose.classList.contains("active")) {
+      mobileMenu.classList.remove("active");
+      hamburger.classList.remove("active");
+      menuClose.classList.remove("active");
+      searchOpen.classList.remove("active");
+      document.body.style.overflow = "";
+    } else {
+      mobileMenu.classList.add("active");
+      hamburger.classList.add("active");
+      menuClose.classList.add("active");
       searchPage.classList.remove("active");
       searchClose.classList.remove("active");
       document.body.style.overflow = mobileMenu.classList.contains("active")
@@ -109,6 +132,7 @@ window.addEventListener("load", function () {
       searchOpen.classList.add("active");
       searchClose.classList.add("active");
       hamburger.classList.remove("active");
+      menuClose.classList.remove("active");
       mobileMenu.classList.remove("active");
       document.body.style.overflow = searchPage.classList.contains("active")
         ? "hidden"
@@ -121,12 +145,13 @@ window.addEventListener("load", function () {
       searchPage.classList.remove("active");
       searchOpen.classList.remove("active");
       searchClose.classList.remove("active");
+      hamburger.classList.remove("active");
       document.body.style.overflow = "";
     } else {
       searchPage.classList.add("active");
       searchOpen.classList.add("active");
       searchClose.classList.add("active");
-      hamburger.classList.remove("active");
+      hamburger.classList.add("active");
       mobileMenu.classList.remove("active");
       document.body.style.overflow = searchPage.classList.contains("active")
         ? "hidden"
